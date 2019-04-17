@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BorderPane prefHeight="499.0" prefWidth="555.0"
-	xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="it.polito.tdp.poweroutages.PowerOutagesController">
-	<left>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-	</left>
-	<bottom>
 
-	</bottom>
-	<center>
-
-	</center>
-	<top>
-
-	</top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.poweroutages.PowerOutagesController">
+   <top>
+      <Label prefHeight="33.0" prefWidth="100.0" text="TdP Insurance Unit" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="367.0" prefWidth="349.0">
+               <children>
+                  <ImageView fitHeight="366.0" fitWidth="309.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Desktop/NERC-map.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="367.0" prefWidth="332.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="90.0" text="Select NERC" />
+                        <ComboBox fx:id="finestranerc" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="85.0" text="  Max Years" />
+                        <TextField fx:id="spazioanni" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="90.0" text="   Max Hours" />
+                        <TextField fx:id="spazioore" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="bottoneworst" mnemonicParsing="false" onAction="#analizzaworst" text="Worst Case Analysis" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <TextArea fx:id="testoresult" prefHeight="287.0" prefWidth="661.0" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
